@@ -1,0 +1,12 @@
+NEK ELITE COMPLETE UPLOAD
+
+1. In GitHub, open your nek-elite-website repository.
+2. Delete the old website files if you want the cleanest reset.
+3. Upload ALL files from this folder to the ROOT of the repository.
+4. Do not put them inside another folder.
+5. Commit the upload.
+6. Wait about 1 minute, then hard refresh your GitHub Pages site.
+
+IMPORTANT:
+- index.html, styles.css, and the two logo files must all be in the same root directory.
+- This package does not use site-data.js, so that file can be deleted.
