@@ -17,104 +17,22 @@
       --muted: #6b7583;
       --line: #dfe5ed;
     }
-/* PRACTICES */
 
-#practices {
-  background: white;
-}
-
-.practice-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-}
-
-.practice-card {
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  overflow: hidden;
-  background: var(--soft);
-}
-
-.practice-date {
-  background: var(--navy);
-  color: white;
-  padding: 18px 20px;
-  font-size: 1.15rem;
-  font-weight: 900;
-}
-
-.practice-events {
-  padding: 14px 20px 18px;
-}
-
-.practice-event {
-  display: grid;
-  grid-template-columns: 60px 1fr auto;
-  gap: 14px;
-  align-items: center;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.practice-event:last-child {
-  border-bottom: 0;
-}
-
-.practice-team {
-  color: var(--red);
-  font-weight: 900;
-}
-
-.practice-type {
-  color: var(--navy);
-  font-weight: 800;
-}
-
-.practice-time {
-  color: var(--muted);
-  font-weight: 700;
-  text-align: right;
-}
-
-.tournament-note {
-  margin-top: 28px;
-  padding: 22px;
-  border-radius: 16px;
-  background: var(--navy);
-  color: white;
-  text-align: center;
-}
-
-.tournament-note strong {
-  display: block;
-  font-size: 1.15rem;
-  margin-bottom: 6px;
-}
-
-.tournament-note span {
-  color: #cbd8ea;
-}
-
-@media (max-width: 850px) {
-  .practice-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .practice-event {
-    grid-template-columns: 52px 1fr;
-  }
-
-  .practice-time {
-    grid-column: 2;
-    text-align: left;
-  }
-}    * {
+    * {
       box-sizing: border-box;
     }
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 92px;
+    }
+
+    #teams,
+    #practices,
+    #sponsors,
+    #about,
+    #contact {
+      scroll-margin-top: 92px;
     }
 
     body {
@@ -172,6 +90,10 @@
       gap: 24px;
       font-weight: 700;
       font-size: .9rem;
+    }
+
+    .nav-links a {
+      cursor: pointer;
     }
 
     .nav-links a:hover {
@@ -331,6 +253,85 @@
       font-weight: 900;
     }
 
+    /* PRACTICES */
+
+    #practices {
+      background: white;
+    }
+
+    .practice-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .practice-card {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      background: var(--soft);
+    }
+
+    .practice-date {
+      background: var(--navy);
+      color: white;
+      padding: 18px 20px;
+      font-size: 1.15rem;
+      font-weight: 900;
+    }
+
+    .practice-events {
+      padding: 14px 20px 18px;
+    }
+
+    .practice-event {
+      display: grid;
+      grid-template-columns: 60px 1fr auto;
+      gap: 14px;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .practice-event:last-child {
+      border-bottom: 0;
+    }
+
+    .practice-team {
+      color: var(--red);
+      font-weight: 900;
+    }
+
+    .practice-type {
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .practice-time {
+      color: var(--muted);
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .tournament-note {
+      margin-top: 28px;
+      padding: 22px;
+      border-radius: 16px;
+      background: var(--navy);
+      color: white;
+      text-align: center;
+    }
+
+    .tournament-note strong {
+      display: block;
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+    }
+
+    .tournament-note span {
+      color: #cbd8ea;
+    }
+
     /* SPONSORS */
 
     #sponsors {
@@ -423,13 +424,23 @@
 
     @media (max-width: 850px) {
       .teams-grid,
-      .sponsor-grid {
+      .sponsor-grid,
+      .practice-grid {
         grid-template-columns: 1fr;
       }
 
       .nav-links {
         gap: 12px;
         font-size: .75rem;
+      }
+
+      .practice-event {
+        grid-template-columns: 52px 1fr;
+      }
+
+      .practice-time {
+        grid-column: 2;
+        text-align: left;
       }
     }
 
@@ -466,11 +477,11 @@
     </a>
 
     <nav class="nav-links">
-     <a href="#teams">Teams</a>
-<a href="#practices">Practices</a>
-<a href="#sponsors">Sponsors</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
+      <a href="#teams">Teams</a>
+      <a href="#practices">Practices</a>
+      <a href="#sponsors">Sponsors</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
 
   </div>
@@ -520,27 +531,29 @@
     </div>
 
   </section>
-  
-<!-- PRACTICE SCHEDULE -->
 
-<section id="practices">
 
-  <div class="container">
+  <!-- PRACTICE SCHEDULE -->
 
-    <div class="section-title">
-      <small>November & December</small>
-      <h2>Practice Schedule</h2>
-      <p>
-        Current NEK Elite practice dates and times.
-      </p>
+  <section id="practices">
+
+    <div class="container">
+
+      <div class="section-title">
+        <small>November & December</small>
+        <h2>Practice Schedule</h2>
+        <p>
+          Current NEK Elite practice dates and times.
+        </p>
+      </div>
+
+      <div class="practice-grid" id="practiceGrid"></div>
+
     </div>
 
-    <div class="practice-grid" id="practiceGrid"></div>
+  </section>
 
-  </div>
 
-</section>
-  
   <!-- SPONSORS -->
 
   <section id="sponsors">
@@ -572,11 +585,8 @@
     <div class="container">
 
       <div class="section-title">
-
         <small>Who We Are</small>
-
         <h2>NEK Elite Softball</h2>
-
       </div>
 
       <div class="about-text">
@@ -602,11 +612,8 @@
     <div class="container">
 
       <div class="section-title">
-
         <small>Get In Touch</small>
-
         <h2>Contact NEK Elite</h2>
-
       </div>
 
       <div class="contact-card">
@@ -633,22 +640,15 @@
 <footer>
 
   <div class="container">
-
     © <span id="year"></span> NEK Elite Softball
-
   </div>
 
 </footer>
 
 
-<!-- TEAM / SPONSOR DATA -->
-
 <script src="site-data.js"></script>
 
-
 <script>
-
-  /* BUILD TEAMS */
 
   function renderTeams() {
 
@@ -672,17 +672,11 @@
         .join("");
 
       grid.innerHTML += `
-
         <article class="team-card">
 
           <div class="team-header">
-
             <h3>${age}</h3>
-
-            <p>
-              ${team.players.length} Players
-            </p>
-
+            <p>${team.players.length} Players</p>
           </div>
 
           <div class="team-body">
@@ -693,24 +687,19 @@
               ${coaches}
             </ul>
 
-
             <h4>Roster</h4>
 
             <table class="roster">
 
               <thead>
-
                 <tr>
                   <th>#</th>
                   <th>Player</th>
                 </tr>
-
               </thead>
 
               <tbody>
-
                 ${players}
-
               </tbody>
 
             </table>
@@ -718,7 +707,6 @@
           </div>
 
         </article>
-
       `;
 
     });
@@ -726,7 +714,54 @@
   }
 
 
-  /* BUILD SPONSORS */
+  function renderPractices() {
+
+    const grid = document.getElementById("practiceGrid");
+
+    grid.innerHTML = "";
+
+    if (!siteData.practices || siteData.practices.length === 0) {
+
+      grid.innerHTML = `
+        <div class="empty-sponsors">
+          Practice schedule coming soon.
+        </div>
+      `;
+
+      return;
+    }
+
+    siteData.practices.forEach(day => {
+
+      const events = day.events
+        .map(event => `
+          <div class="practice-event">
+            <div class="practice-team">${event.team}</div>
+            <div class="practice-type">${event.type}</div>
+            <div class="practice-time">${event.time}</div>
+          </div>
+        `)
+        .join("");
+
+      grid.innerHTML += `
+        <div class="practice-card">
+          <div class="practice-date">${day.date}</div>
+
+          <div class="practice-events">
+            ${events}
+          </div>
+        </div>
+      `;
+    });
+
+    grid.innerHTML += `
+      <div class="tournament-note" style="grid-column:1/-1">
+        <strong>2027 Tournament Schedule</strong>
+        <span>Coming this winter.</span>
+      </div>
+    `;
+  }
+
 
   function renderSponsors() {
 
@@ -743,9 +778,7 @@
       `;
 
       return;
-
     }
-
 
     siteData.sponsors.forEach(sponsor => {
 
@@ -776,58 +809,40 @@
 
   }
 
-function renderPractices() {
 
-  const grid = document.getElementById("practiceGrid");
+  renderTeams();
+  renderPractices();
+  renderSponsors();
 
-  grid.innerHTML = "";
 
-  if (!siteData.practices || siteData.practices.length === 0) {
-    grid.innerHTML = `
-      <div class="empty-sponsors">
-        Practice schedule coming soon.
-      </div>
-    `;
-    return;
-  }
+  document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
 
-  siteData.practices.forEach(day => {
+    link.addEventListener("click", function(event) {
 
-    const events = day.events
-      .map(event => `
-        <div class="practice-event">
-          <div class="practice-team">${event.team}</div>
-          <div class="practice-type">${event.type}</div>
-          <div class="practice-time">${event.time}</div>
-        </div>
-      `)
-      .join("");
+      const target = document.querySelector(
+        this.getAttribute("href")
+      );
 
-    grid.innerHTML += `
-      <div class="practice-card">
-        <div class="practice-date">${day.date}</div>
-        <div class="practice-events">
-          ${events}
-        </div>
-      </div>
-    `;
+      if (target) {
+
+        event.preventDefault();
+
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+      }
+
+    });
+
   });
 
-  grid.innerHTML += `
-    <div class="tournament-note" style="grid-column:1/-1">
-      <strong>2027 Tournament Schedule</strong>
-      <span>Coming this winter.</span>
-    </div>
-  `;
-} renderTeams();
-renderPractices();
-renderSponsors();
 
   document.getElementById("year").textContent =
     new Date().getFullYear();
 
 </script>
-
 
 </body>
 </html>
