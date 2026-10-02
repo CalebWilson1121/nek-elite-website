@@ -67,3 +67,41 @@ const siteData = {
 
   sponsors: []
 };
+practices: [
+  {
+    date: "November 3",
+    events: [
+      { team: "12U", time: "4:00–4:30 PM", type: "Pitching" },
+      { team: "12U", time: "4:30–5:30 PM", type: "Practice" },
+      { team: "10U", time: "5:30–6:00 PM", type: "Pitching" },
+      { team: "10U", time: "6:00–7:00 PM", type: "Practice" }
+    ]
+  },
+  {
+    date: "November 10",
+    events: [
+      { team: "12U", time: "4:00–4:30 PM", type: "Pitching" },
+      { team: "12U", time: "4:30–5:30 PM", type: "Practice" },
+      { team: "10U", time: "5:30–6:00 PM", type: "Pitching" },
+      { team: "10U", time: "6:00–7:00 PM", type: "Practice" }
+    ]
+  },
+  {
+    date: "December 1",
+    events: [
+      { team: "12U", time: "4:00–4:30 PM", type: "Pitching" },
+      { team: "12U", time: "4:30–5:30 PM", type: "Practice" },
+      { team: "10U", time: "5:30–6:00 PM", type: "Pitching" },
+      { team: "10U", time: "6:00–7:00 PM", type: "Practice" }
+    ]
+  },
+  {
+    date: "December 15",
+    events: [
+      { team: "12U", time: "4:00–4:30 PM", type: "Pitching" },
+      { team: "12U", time: "4:30–5:30 PM", type: "Practice" },
+      { team: "10U", time: "5:30–6:00 PM", type: "Pitching" },
+      { team: "10U", time: "6:00–7:00 PM", type: "Practice" }
+    ]
+  }
+]
