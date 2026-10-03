@@ -100,27 +100,3 @@ footer{background:#05142b;color:#aebcd0;padding:28px 0;text-align:center;font-si
 
 /* Sponsor logo safety */
 img[alt="RIP-IT logo"]{object-fit:contain;flex:0 0 auto}
-
-
-/* Main homepage banner logo */
-.main-banner-logo-wrap{
-  max-width:520px;
-  margin:22px auto 20px;
-  background:#fff;
-  border-radius:22px;
-  padding:18px;
-  box-shadow:0 18px 45px rgba(0,0,0,.22);
-}
-.main-banner-logo{
-  width:100%;
-  height:auto;
-  max-height:360px;
-  object-fit:contain;
-}
-@media(max-width:650px){
-  .main-banner-logo-wrap{
-    max-width:340px;
-    padding:12px;
-    margin-top:18px;
-  }
-}
