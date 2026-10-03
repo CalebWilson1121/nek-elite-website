@@ -100,3 +100,114 @@ footer{background:#05142b;color:#aebcd0;padding:28px 0;text-align:center;font-si
 
 /* Sponsor logo safety */
 img[alt="RIP-IT logo"]{object-fit:contain;flex:0 0 auto}
+
+
+/* Main homepage banner logo */
+.main-banner-logo-wrap{
+  max-width:520px;
+  margin:22px auto 20px;
+  background:#fff;
+  border-radius:22px;
+  padding:18px;
+  box-shadow:0 18px 45px rgba(0,0,0,.22);
+}
+.main-banner-logo{
+  width:100%;
+  height:auto;
+  max-height:360px;
+  object-fit:contain;
+}
+@media(max-width:650px){
+  .main-banner-logo-wrap{
+    max-width:340px;
+    padding:12px;
+    margin-top:18px;
+  }
+}
+
+
+/* Sponsor section + sponsor packet */
+.featured-sponsor{
+  display:block;
+  max-width:760px;
+  margin:0 auto;
+  background:#fff;
+  color:var(--navy);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:30px;
+  text-align:center;
+  box-shadow:var(--shadow);
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.featured-sponsor:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(7,26,56,.14)}
+.featured-sponsor-level{
+  color:var(--red);
+  font-size:.74rem;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  margin-bottom:7px;
+}
+.featured-sponsor-name{font-size:2.7rem;font-weight:900;line-height:1}
+.featured-sponsor-site{margin-top:8px;color:var(--muted);font-weight:700}
+
+.sponsor-level-link{display:block;cursor:pointer;transition:transform .18s ease,background .18s ease}
+.sponsor-level-link:hover{transform:translateY(-4px);background:rgba(255,255,255,.14)}
+.sponsor-level-link em{display:block;margin-top:12px;color:var(--gold);font-style:normal;font-size:.78rem;font-weight:900}
+
+.packet-levels{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.packet-card{
+  scroll-margin-top:110px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:28px;
+  box-shadow:var(--shadow);
+  background:#fff;
+}
+.packet-card.featured-level{
+  grid-column:1/-1;
+  border:2px solid var(--red);
+}
+.packet-card h3{margin:0;color:var(--navy);font-size:2rem}
+.packet-price{font-size:2.7rem;font-weight:900;color:var(--red);margin:7px 0 18px}
+.packet-card ul{margin:0 0 24px;padding-left:22px;line-height:1.9;color:var(--ink)}
+.packet-badge{
+  display:inline-block;
+  background:var(--red);
+  color:#fff;
+  padding:7px 11px;
+  border-radius:999px;
+  font-size:.68rem;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+.contact-options{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.contact-option{
+  display:block;
+  background:#fff;
+  color:var(--navy);
+  border-radius:16px;
+  padding:24px;
+  text-align:center;
+  transition:transform .18s ease;
+}
+.contact-option:hover{transform:translateY(-3px)}
+.contact-option span{
+  display:block;
+  color:var(--red);
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  font-size:.72rem;
+  font-weight:900;
+  margin-bottom:7px;
+}
+.contact-option strong{font-size:1.05rem}
+.contact-options-light .contact-option{border:1px solid var(--line);box-shadow:var(--shadow)}
+
+@media(max-width:850px){
+  .packet-levels,.contact-options{grid-template-columns:1fr}
+  .packet-card.featured-level{grid-column:auto}
+}
