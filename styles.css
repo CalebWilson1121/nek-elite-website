@@ -97,3 +97,6 @@ footer{background:#05142b;color:#aebcd0;padding:28px 0;text-align:center;font-si
   .hero{padding:70px 0}
   section{padding:56px 0}
 }
+
+/* Sponsor logo safety */
+img[alt="RIP-IT logo"]{object-fit:contain;flex:0 0 auto}
